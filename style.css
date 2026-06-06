@@ -1,4 +1,9 @@
-body { background-color: #0f172a; color: white; font-family: sans-serif; padding: 20px; }
-.grid { display: grid; gap: 20px; }
-.card { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #38bdf8; }
-h3 { margin-top: 0; color: #38bdf8; }
+body { background-color: #0b1120; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; padding: 40px; }
+h1 { color: #f8fafc; }
+.card { background: #1e293b; padding: 20px; border-radius: 8px; border: 1px solid #334155; }
+.alert-banner { background: #7f1d1d; color: #fecaca; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; font-weight: bold; }
+.grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; margin-bottom: 20px; }
+.footer-grid { grid-template-columns: repeat(3, 1fr); }
+.price { font-size: 1.5rem; font-weight: bold; margin: 10px 0; }
+.gain { color: #22c55e; }
+.gain.negative { color: #ef4444; }
