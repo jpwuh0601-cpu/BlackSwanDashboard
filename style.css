@@ -1,16 +1,15 @@
-body { background-color: #0b1120; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; padding: 40px; }
-h1 { color: #f8fafc; margin-bottom: 30px; }
+body { background-color: #0b1120; color: #e2e8f0; font-family: sans-serif; padding: 20px; }
+.card { background: #1e293b; padding: 20px; border-radius: 10px; border: 1px solid #334155; }
+h1 { color: white; }
 
-/* 數據方塊樣式 */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
-.card { background: #1e293b; padding: 25px; border-radius: 12px; border: 1px solid #334155; text-align: center; }
-
-/* 放大字體 */
-h3 { font-size: 1.2rem; color: #94a3b8; margin-bottom: 15px; }
-.price { font-size: 2rem; font-weight: bold; color: #f8fafc; margin: 10px 0; }
-.gain { font-size: 1.2rem; font-weight: bold; color: #22c55e; }
+/* 數據並排 Grid */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px; }
+.price { font-size: 1.5rem; font-weight: bold; }
+.gain { color: #22c55e; }
 .gain.negative { color: #ef4444; }
 
-/* 下方區域 */
-.footer-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.footer-card { text-align: left; padding: 20px; }
+/* 新聞與下方排版 */
+.analysis-card { margin-bottom: 20px; }
+#news-list { list-style: none; padding: 0; }
+#news-list li { margin-bottom: 10px; border-bottom: 1px solid #334155; padding-bottom: 5px; }
+.footer-grid { grid-template-columns: repeat(3, 1fr); }
