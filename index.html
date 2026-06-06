@@ -1,28 +1,14 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-    <meta charset="UTF-8">
-    <title>黑天鵝監測儀表板</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>黑天鵝監測儀表板</h1>
-    
-    <div id="breaking-news-container" class="alert-banner"></div>
+<div id="data-container" class="grid">
+    <div class="card"><h3>道瓊指數</h3><p class="price">$39421.20</p><p class="gain">1.08%</p></div>
+    <div class="card"><h3>那斯達克</h3><p class="price">$16736.50</p><p class="gain negative">-1.55%</p></div>
+    <div class="card"><h3>標普500</h3><p class="price">$5283.20</p><p class="gain">1.60%</p></div>
+    <div class="card"><h3>台積電</h3><p class="price">$2305.30</p><p class="gain negative">-1.06%</p></div>
+    <div class="card"><h3>黃金</h3><p class="price">$4420.44</p><p class="gain">1.27%</p></div>
+    <div class="card"><h3>原油</h3><p class="price">$75.00</p><p class="gain">0.00%</p></div>
+</div>
 
-    <div class="card analysis-card">
-        <h3>即時宏觀深度分析</h3>
-        <p>聯準會最新會議紀要顯示，官員對通膨降溫速度仍存疑慮，暗示高利率可能維持更久，市場預期資金將持續流向美元作為防禦性資產，導致新興市場股市壓力驟增。<br><br>
-        中東地區地緣衝突持續升溫，不僅影響原油供給穩定性，更推升黃金作為避險工具的市場需求，VIX 指數盤中出現異常波動，建議投資人需嚴控槓桿比例以因應行情。<br><br>
-        科技龍頭最新財報亮眼，AI 高效能運算需求強勁，支撐半導體板塊走勢，投資人應持續關注台積電毛利率與庫存週轉率，作為判斷科技股多頭動能是否持續的先行指標。</p>
-    </div>
-
-    <div id="data-container" class="grid"></div>
-
-    <button id="update-btn">更新監測數據</button>
-
-    <div id="news-container" class="grid footer-grid"></div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<div class="grid footer-grid">
+    <div class="card footer-card"><h3>FED 利率決策</h3><p>重點監控：CPI/PCE 數據、聯準會官員談話 (Fed Speak)。</p></div>
+    <div class="card footer-card"><h3>地緣風險監控</h3><p>重點監控：原油供給鏈、黃金避險溢價、VIX 指數波動。</p></div>
+    <div class="card footer-card"><h3>企業景氣動能</h3><p>重點監控：科技龍頭財報展望、半導體庫存週轉、台積電毛利率。</p></div>
+</div>
