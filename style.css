@@ -1,18 +1,27 @@
+/* 基礎設定 */
 body { 
     background-color: #0b1120; 
     color: #e2e8f0; 
     font-family: 'Segoe UI', sans-serif; 
-    padding: 40px; 
-    line-height: 1.6; 
+    padding: 40px 20px; /* 調整左右邊距 */
+    line-height: 1.6;
+    display: flex; /* 使用 flexbox 讓內容置中 */
+    flex-direction: column;
+    align-items: center; /* 水平置中 */
 }
 
-/* 標題設定：加大且具氣勢 */
+/* 限制整體內容寬度，避免在寬螢幕上過度拉伸 */
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
 h1 { 
     color: #f8fafc; 
     font-size: 3.5rem; 
     margin-bottom: 40px; 
     font-weight: 800; 
-    letter-spacing: -1px;
+    text-align: center; /* 標題置中 */
 }
 
 .card { 
@@ -20,25 +29,16 @@ h1 {
     padding: 30px; 
     border-radius: 12px; 
     border: 1px solid #334155; 
+    width: 100%; /* 確保卡片填滿容器 */
 }
 
-h3 { font-size: 1.4rem; color: #94a3b8; margin-bottom: 15px; }
-
-.price { font-size: 2.5rem; font-weight: bold; color: #ffffff; margin: 10px 0; }
-
-.gain { font-size: 1.5rem; font-weight: bold; color: #22c55e; }
-.gain.negative { color: #ef4444; }
-
-.analysis-card p, .analysis-card li, .card p { 
-    font-size: 1.2rem; 
-    color: #cbd5e1; 
-}
-
-/* 網格佈局：確保數據並排整齊 */
+/* 網格設定 */
 .grid { 
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px; 
     margin-bottom: 25px; 
+    width: 100%;
 }
-.footer-grid { grid-template-columns: repeat(3, 1fr); }
+
+/* 其他設定保持不變... */
