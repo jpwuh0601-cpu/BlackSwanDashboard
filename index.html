@@ -1,10 +1,39 @@
-<div class="card analysis-card">
-    <div class="card-header">
-        <h3>即時宏觀深度分析</h3>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑天鵝監測儀表板</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>黑天鵝監測儀表板</h1>
+
+        <div class="card analysis-card">
+            <h3>即時宏觀深度分析</h3>
+            <ul id="news-list">
+                <li id="news-1">正在載入最新宏觀分析...</li>
+                <li id="news-2">正在載入最新地緣局勢...</li>
+                <li id="news-3">正在載入科技景氣數據...</li>
+            </ul>
+        </div>
+
+        <div class="grid" id="data-container">
+            <div class="card"><h3>道瓊指數</h3><p class="price">39421.2</p><p class="gain">+$420.5 (1.08%)</p></div>
+            <div class="card"><h3>那斯達克</h3><p class="price">16736.5</p><p class="gain">-$262.1 (-1.55%)</p></div>
+            <div class="card"><h3>標普500</h3><p class="price">5283.2</p><p class="gain">+$84.5 (1.60%)</p></div>
+            <div class="card"><h3>台積電</h3><p class="price">2305.3</p><p class="gain">-$24.4 (-1.06%)</p></div>
+            <div class="card"><h3>黃金</h3><p class="price">4420.4</p><p class="gain">+$56.1 (1.27%)</p></div>
+            <div class="card"><h3>原油</h3><p class="price">75.0</p><p class="gain">+$0.0 (0.00%)</p></div>
+        </div>
+
+        <div class="grid" id="footer-container">
+            <div class="card"><h3>FED 利率決策</h3><p class="footer-text">聚焦CPI/PCE數據，聯準會官員鷹派發言可能引發市場回調風險。</p></div>
+            <div class="card"><h3>地緣風險監控</h3><p class="footer-text">美伊戰爭風險溢價上升，建議適度調高黃金避險屬性資產配置。</p></div>
+            <div class="card"><h3>企業景氣動能</h3><p class="footer-text">觀察科技龍頭財報，半導體庫存調整與台積電毛利率是關鍵指標。</p></div>
+        </div>
     </div>
-    <ul id="news-list">
-        <li id="news-1">正在載入最新宏觀分析...</li>
-        <li id="news-2">正在載入最新地緣局勢...</li>
-        <li id="news-3">正在載入科技景氣數據...</li>
-    </ul>
-</div>
+    <script src="script.js"></script>
+</body>
+</html>
