@@ -1,17 +1,13 @@
 body { background-color: #0b1120; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; padding: 20px; display: flex; flex-direction: column; align-items: center; }
 .container { max-width: 1200px; width: 100%; }
 
-h1 { font-size: 3rem; text-align: center; margin-bottom: 30px; font-weight: 800; }
-.card { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; margin-bottom: 15px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px; }
+.card { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; }
 
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-.price { font-size: 2rem; font-weight: bold; margin: 5px 0; }
-.gain { font-size: 1.2rem; font-weight: bold; color: #22c55e; }
-.gain.negative { color: #ef4444; }
+.price { font-size: 1.8rem; font-weight: bold; margin: 5px 0; }
+.footer-text { font-size: 1.1rem; color: #cbd5e1; }
 
-/* 手機適配 */
 @media (max-width: 768px) {
-    .grid { grid-template-columns: 1fr; }
+    .grid { grid-template-columns: 1fr; } /* 手機改單欄 */
     h1 { font-size: 2rem; }
-    .price { font-size: 1.5rem; }
 }
