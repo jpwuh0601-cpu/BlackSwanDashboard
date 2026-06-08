@@ -1,15 +1,19 @@
 function updateDashboard() {
-    // 股市數據跳動
     document.querySelectorAll('#data-container .card').forEach(card => {
+        const title = card.querySelector('h3').innerText;
         const gainEl = card.querySelector('.gain');
         if (!gainEl) return;
-        const pt = (Math.random() * 200).toFixed(1);
+
+        // 依據指數屬性設定波動範圍
+        let range = title === '美元指數' ? 0.5 : (title.includes('原油') ? 1 : 200);
+        const pt = (Math.random() * range).toFixed(2);
         const pct = (Math.random() * 2 - 1).toFixed(2);
-        gainEl.innerText = `${pct >= 0 ? '+' : ''}$${pt} (${pct >= 0 ? '+' : ''}${pct}%)`;
-        gainEl.style.color = pct >= 0 ? '#22c55e' : '#ef4444';
+        const isUp = pct >= 0;
+        
+        gainEl.innerText = `${isUp ? '+' : ''}${pt} (${isUp ? '+' : ''}${pct}%)`;
+        gainEl.style.color = isUp ? '#22c55e' : '#ef4444';
     });
 
-    // 深度新聞內容 (50字左右)
     const news = [
         "美伊戰爭局勢惡化，中東航道安全疑慮導致原油供給不確定性大增，避險資金瘋狂湧入黃金市場，全球投資人對地緣風險溢價的關注度急劇上升，市場波動加劇。",
         "聯準會會議紀要顯示鷹派立場持續，高利率環境可能延續至年底，美元指數走強對新興市場貨幣構成嚴峻壓力，全球資金流動性出現顯著緊縮與資產重組潮。",
@@ -20,6 +24,6 @@ function updateDashboard() {
     document.getElementById('news-3').innerText = "3. " + news[2];
 }
 
-// 每 30 分鐘 (1,800,000 毫秒) 更新一次
+// 每 30 分鐘更新一次
 setInterval(updateDashboard, 1800000); 
 updateDashboard();
