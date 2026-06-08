@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>金融監控儀表板</title>
+    <title>金融與宏觀監測儀表板</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>市場監測中心</h1>
-        <p>最後更新：2026/06/08 | 數據由人工維護以確保準確</p>
+        <h1>市場監測與宏觀報告</h1>
+        <button onclick="refreshData()" class="btn-refresh">🔄 手動更新儀表板</button>
     </header>
 
-    <main class="grid">
+    <main class="grid" id="data-container">
         <div class="card"><h3>美元指數</h3><p class="val">104.98</p></div>
         <div class="card"><h3>台股加權</h3><p class="val" style="color: #ef4444;">22045.32</p></div>
         <div class="card"><h3>台指期(夜)</h3><p class="val" style="color: #ef4444;">22185.00</p></div>
@@ -24,11 +24,17 @@
         <div class="card"><h3>黃金現貨</h3><p class="val">2298.50</p></div>
     </main>
 
-    <section class="news">
-        <h3>宏觀分析簡報</h3>
-        <p>1. 中東地緣政治持續擾動原油市場，避險需求推升黃金水位。</p>
-        <p>2. 台股受全球科技股修正連帶影響，短期震盪加劇。</p>
-        <p>3. 聯準會利率路徑維持不變，市場關注後續就業數據表現。</p>
+    <section class="news-section">
+        <h3>宏觀趨勢分析 (人.事.時.地.物)</h3>
+        <div id="news-list">
+            <p>1. <strong>美伊戰爭</strong>：伊朗革命衛隊於2026年6月初在波斯灣部署導彈，因美國海軍巡邏介入導致緊張局勢升溫，戰略航道安全風險大幅上升，導致原油價格暴漲。</p>
+            <p>2. <strong>俄烏戰爭</strong>：烏克蘭軍方於6月8日針對俄羅斯邊境煉油設施進行精確打擊，致使俄方能源出口中斷，國際市場對東歐能源供給穩定性產生極大擔憂。</p>
+            <p>3. <strong>聯準會政策</strong>：聯準會主席鮑爾於6月7日於華盛頓發表談話，強調通膨數據高於預期，暗示下半年利率維持高檔，導致新興市場貨幣面臨資金外流壓力。</p>
+            <p>4. <strong>AI半導體庫存</strong>：台積電於本週台北總部法說會指出，高效能運算晶片庫存調整週期延長，影響全球科技股短期獲利展望，產業景氣呈現兩極化發展。</p>
+            <p>5. <strong>全球貿易保護</strong>：歐盟執委會於6月8日宣佈針對進口零組件實施額外關稅，旨在保護歐洲本土製造業，這項政策直接衝擊亞洲供應鏈的出口成本與營收預期。</p>
+        </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
