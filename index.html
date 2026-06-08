@@ -3,46 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黑天鵝監測儀表板</title>
+    <title>黑天鵝精準監測儀表板</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>黑天鵝監測儀表板</h1>
-
+        
         <div class="card analysis-card">
-            <h3>即時宏觀深度分析</h3>
+            <h3>即時宏觀深度分析 (手動更新)</h3>
             <ul id="news-list">
-                <li>美伊戰爭風險溢價持續，導致國際原油與黃金價格震盪，全球資金避險意識抬頭，投資人密切關注中東局勢對供應鏈的後續衝擊。</li>
-                <li>聯準會政策走向不明朗，美元指數呈現區間整理，市場正評估高利率環境對企業獲利的長期影響，需留意後續通膨數據公佈對金融市場帶來的壓力。</li>
-                <li>AI 供應鏈動能雖強，但半導體產業正面臨庫存調整週期，台積電毛利率展望成為市場關注焦點，投資人應區分個股表現與總體景氣循環之差異。</li>
+                <li>美伊戰爭風險溢價持續，中東局勢變動導致避險資金流向黃金與美元，全球供應鏈受航道不穩衝擊，需持續關注能源溢價影響。</li>
+                <li>聯準會利率維持高位，市場對通膨回落速度保持審慎態度，美元指數近期呈現區間盤整，資金流動性持續緊縮。</li>
+                <li>半導體產業鏈進入庫存調整尾聲，AI 應用需求支撐科技股獲利動能，投資人應針對個股毛利率表現進行區隔分析。</li>
             </ul>
         </div>
 
         <div class="grid" id="data-container">
-            <div class="card"><h3>美元指數</h3><p class="price">104.20</p><p class="gain">-$0.15 (-0.14%)</p></div>
-            <div class="card"><h3>台股加權</h3><p class="price">21850.50</p><p class="gain">+$120.20 (+0.55%)</p></div>
-            <div class="card"><h3>台指期</h3><p class="price">21890.00</p><p class="gain">+$135.00 (+0.62%)</p></div>
-            <div class="card"><h3>日經225</h3><p class="price">38900.50</p><p class="gain">-$150.00 (-0.38%)</p></div>
-            <div class="card"><h3>韓國綜合</h3><p class="price">2720.80</p><p class="gain">+$12.50 (+0.46%)</p></div>
-            <div class="card"><h3>道瓊工業</h3><p class="price">39420.00</p><p class="gain">+$420.00 (+1.08%)</p></div>
-            <div class="card"><h3>那斯達克</h3><p class="price">16736.00</p><p class="gain">-$262.00 (-1.55%)</p></div>
-            <div class="card"><h3>標普500</h3><p class="price">5283.00</p><p class="gain">+$84.50 (+1.62%)</p></div>
-            <div class="card"><h3>黃金</h3><p class="price">2330.40</p><p class="gain">+$15.10 (+0.65%)</p></div>
-            <div class="card"><h3>原油</h3><p class="price">75.50</p><p class="gain">+$0.45 (+0.60%)</p></div>
+            <div class="card"><h3>美元指數</h3><p class="price">104.95</p><p class="gain" style="color: #ef4444;">-0.12 (-0.11%)</p></div>
+            <div class="card"><h3>台股加權</h3><p class="price">22045.32</p><p class="gain" style="color: #22c55e;">+188.50 (+0.86%)</p></div>
+            <div class="card"><h3>台指期</h3><p class="price">22112.00</p><p class="gain" style="color: #22c55e;">+210.00 (+0.96%)</p></div>
+            <div class="card"><h3>日經225</h3><p class="price">38683.93</p><p class="gain" style="color: #22c55e;">+355.70 (+0.93%)</p></div>
+            <div class="card"><h3>韓國綜合</h3><p class="price">2648.76</p><p class="gain" style="color: #22c55e;">+32.14 (+1.23%)</p></div>
+            <div class="card"><h3>道瓊工業</h3><p class="price">39689.54</p><p class="gain" style="color: #22c55e;">+179.32 (+0.45%)</p></div>
+            <div class="card"><h3>那斯達克</h3><p class="price">17325.21</p><p class="gain" style="color: #22c55e;">+142.10 (+0.83%)</p></div>
+            <div class="card"><h3>標普500</h3><p class="price">5375.05</p><p class="gain" style="color: #22c55e;">+28.45 (+0.53%)</p></div>
+            <div class="card"><h3>黃金</h3><p class="price">2298.50</p><p class="gain" style="color: #ef4444;">-32.00 (-1.37%)</p></div>
+            <div class="card"><h3>原油</h3><p class="price">75.53</p><p class="gain" style="color: #22c55e;">+0.05 (+0.07%)</p></div>
         </div>
     </div>
-   <div class="grid" id="data-container">
-    <div class="card"><h3>美元指數</h3><p class="price">104.95</p><p class="gain">-$0.12 (-0.11%)</p></div>
-    <div class="card"><h3>台股加權</h3><p class="price">22045.32</p><p class="gain">+$188.50 (+0.86%)</p></div>
-    <div class="card"><h3>台指期</h3><p class="price">22112.00</p><p class="gain">+$210.00 (+0.96%)</p></div>
-    <div class="card"><h3>日經225</h3><p class="price">38683.93</p><p class="gain">+$355.70 (+0.93%)</p></div>
-    <div class="card"><h3>韓國綜合</h3><p class="price">2648.76</p><p class="gain">+$32.14 (+1.23%)</p></div>
-    <div class="card"><h3>道瓊工業</h3><p class="price">39689.54</p><p class="gain">+$179.32 (+0.45%)</p></div>
-    <div class="card"><h3>那斯達克</h3><p class="price">17325.21</p><p class="gain">+$142.10 (+0.83%)</p></div>
-    <div class="card"><h3>標普500</h3><p class="price">5375.05</p><p class="gain">+$28.45 (+0.53%)</p></div>
-    <div class="card"><h3>黃金</h3><p class="price">2298.50</p><p class="gain">-$32.00 (-1.37%)</p></div>
-    <div class="card"><h3>原油</h3><p class="price">75.53</p><p class="gain">+$0.05 (+0.07%)</p></div>
-</div> 
 </body>
 </html>
