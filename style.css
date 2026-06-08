@@ -22,3 +22,12 @@ body { background: #0b1120; color: #f1f5f9; font-family: sans-serif; padding: 20
 .gain { font-size: 1.1rem; font-weight: bold; }
 .btn-refresh { background: #3b82f6; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
 .news-section { background: #1e293b; padding: 20px; border-radius: 10px; line-height: 1.6; }
+body { background: #0b1120; color: #f1f5f9; font-family: sans-serif; padding: 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 30px; }
+.card { background: #1e293b; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #334155; }
+.val { font-size: 1.2rem; font-weight: bold; margin: 10px 0; }
+.gain { font-size: 1.1rem; font-weight: bold; }
+/* 台/日/韓：漲紅跌綠 (#10b981為綠) */
+/* 美股：漲綠跌紅 (#ef4444為紅) */
+.btn-refresh { background: #3b82f6; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+.news-section { background: #1e293b; padding: 20px; border-radius: 10px; line-height: 1.6; }
