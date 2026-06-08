@@ -19,5 +19,7 @@ function updateDashboard() {
     document.getElementById('news-2').innerText = "2. " + news[1];
     document.getElementById('news-3').innerText = "3. " + news[2];
 }
-setInterval(updateDashboard, 5000);
+
+// 每 30 分鐘 (1,800,000 毫秒) 更新一次
+setInterval(updateDashboard, 1800000); 
 updateDashboard();
