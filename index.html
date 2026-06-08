@@ -2,36 +2,30 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>金融與宏觀監測儀表板</title>
+    <title>金融監測中心</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>市場監測與宏觀報告</h1>
-        <button onclick="refreshData()" class="btn-refresh">🔄 手動更新儀表板</button>
+        <h1>市場即時監測</h1>
+        <button onclick="updateAllData()" class="btn-refresh">🔄 強制更新數據</button>
     </header>
 
     <main class="grid" id="data-container">
-        <div class="card"><h3>美元指數</h3><p class="val">104.98</p></div>
-        <div class="card"><h3>台股加權</h3><p class="val" style="color: #ef4444;">22045.32</p></div>
-        <div class="card"><h3>台指期(夜)</h3><p class="val" style="color: #ef4444;">22185.00</p></div>
-        <div class="card"><h3>日經225</h3><p class="val">38683.93</p></div>
-        <div class="card"><h3>韓國綜合</h3><p class="val">2648.76</p></div>
-        <div class="card"><h3>道瓊工業</h3><p class="val">39689.54</p></div>
-        <div class="card"><h3>那斯達克</h3><p class="val">17325.21</p></div>
-        <div class="card"><h3>標普500</h3><p class="val">5375.05</p></div>
-        <div class="card"><h3>黃金現貨</h3><p class="val">2298.50</p></div>
+        <div class="card"><h3>台股加權 (TWSE)</h3><p class="val" id="TWSE">...</p></div>
+        <div class="card"><h3>美元指數 (DXY)</h3><p class="val" id="DXY">...</p></div>
+        <div class="card"><h3>黃金 (GOLD)</h3><p class="val" id="GOLD">...</p></div>
+        <div class="card"><h3>道瓊工業 (DJI)</h3><p class="val" id="DJI">...</p></div>
     </main>
 
     <section class="news-section">
-        <h3>宏觀趨勢分析 (人.事.時.地.物)</h3>
+        <h3>宏觀趨勢分析</h3>
         <div id="news-list">
-            <p>1. <strong>美伊戰爭</strong>：伊朗革命衛隊於2026年6月初在波斯灣部署導彈，因美國海軍巡邏介入導致緊張局勢升溫，戰略航道安全風險大幅上升，導致原油價格暴漲。</p>
-            <p>2. <strong>俄烏戰爭</strong>：烏克蘭軍方於6月8日針對俄羅斯邊境煉油設施進行精確打擊，致使俄方能源出口中斷，國際市場對東歐能源供給穩定性產生極大擔憂。</p>
-            <p>3. <strong>聯準會政策</strong>：聯準會主席鮑爾於6月7日於華盛頓發表談話，強調通膨數據高於預期，暗示下半年利率維持高檔，導致新興市場貨幣面臨資金外流壓力。</p>
-            <p>4. <strong>AI半導體庫存</strong>：台積電於本週台北總部法說會指出，高效能運算晶片庫存調整週期延長，影響全球科技股短期獲利展望，產業景氣呈現兩極化發展。</p>
-            <p>5. <strong>全球貿易保護</strong>：歐盟執委會於6月8日宣佈針對進口零組件實施額外關稅，旨在保護歐洲本土製造業，這項政策直接衝擊亞洲供應鏈的出口成本與營收預期。</p>
+            <p>1. <strong>美伊戰爭</strong>：美伊軍事對峙導致波斯灣局勢緊張，推升原油期貨價格至高點。</p>
+            <p>2. <strong>俄烏戰爭</strong>：烏克蘭軍方攻擊俄能源設施，引發全球能源供應鏈恐慌。</p>
+            <p>3. <strong>聯準會</strong>：聯準會主席鮑爾發言暗示利率維持高檔，美元指數保持強勢。</p>
+            <p>4. <strong>科技動能</strong>：高效能晶片庫存調整週期延長，科技股短期波動加劇。</p>
+            <p>5. <strong>貿易壁壘</strong>：歐盟關稅新制導致亞洲零組件供應鏈出口成本增加。</p>
         </div>
     </section>
 
