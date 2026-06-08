@@ -2,77 +2,34 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>黑天鵝監測中心</title>
+    <title>金融監控儀表板</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>市場監測與宏觀報告</h1>
-        <button onclick="refreshPage()" class="btn-refresh">🔄 手動更新數據</button>
+        <h1>全球市場即時監控</h1>
+        <button onclick="window.location.reload()" class="btn-refresh">🔄 手動重新整理</button>
     </header>
 
     <main class="grid">
-        <!-- 每一張卡片包含：名稱、價格、漲跌幅 -->
-        <div class="card">
-            <h3>台股加權</h3>
-            <p class="val">20478.45</p>
-            <p class="gain" style="color: #ef4444;">-1568.16 (-7.11%)</p>
-        </div>
-        <div class="card">
-            <h3>台指期(夜)</h3>
-            <p class="val">20512.00</p>
-            <p class="gain" style="color: #ef4444;">-1420.00 (-6.47%)</p>
-        </div>
-        <div class="card">
-            <h3>美元指數</h3>
-            <p class="val">104.98</p>
-            <p class="gain" style="color: #22c55e;">+0.12 (+0.11%)</p>
-        </div>
-        <div class="card">
-            <h3>黃金現貨</h3>
-            <p class="val">2315.20</p>
-            <p class="gain" style="color: #22c55e;">+18.50 (+0.80%)</p>
-        </div>
-        <div class="card">
-            <h3>日經225</h3>
-            <p class="val">38683.93</p>
-            <p class="gain" style="color: #22c55e;">+355.70 (+0.93%)</p>
-        </div>
-        <div class="card">
-            <h3>韓國綜合</h3>
-            <p class="val">2648.76</p>
-            <p class="gain" style="color: #22c55e;">+32.14 (+1.23%)</p>
-        </div>
-        <div class="card">
-            <h3>道瓊工業</h3>
-            <p class="val">39689.54</p>
-            <p class="gain" style="color: #22c55e;">+179.32 (+0.45%)</p>
-        </div>
-        <div class="card">
-            <h3>那斯達克</h3>
-            <p class="val">17325.21</p>
-            <p class="gain" style="color: #22c55e;">+142.10 (+0.83%)</p>
-        </div>
-        <div class="card">
-            <h3>標普500</h3>
-            <p class="val">5375.05</p>
-            <p class="gain" style="color: #22c55e;">+28.45 (+0.53%)</p>
-        </div>
+        <!-- 台/日/韓：漲紅跌綠 -->
+        <div class="card"><h3>加權指數</h3><p class="val">20478.45</p><p class="gain" style="color: #10b981;">-1568.16</p></div>
+        <div class="card"><h3>日經 225</h3><p class="val">38683.93</p><p class="gain" style="color: #10b981;">-2547.00</p></div>
+        <div class="card"><h3>韓國綜合</h3><p class="val">2648.76</p><p class="gain" style="color: #10b981;">-374.61</p></div>
+        
+        <!-- 美股：漲綠跌紅 -->
+        <div class="card"><h3>道瓊工業</h3><p class="val">39689.54</p><p class="gain" style="color: #ef4444;">-695.15</p></div>
+        <div class="card"><h3>那斯達克</h3><p class="val">17325.21</p><p class="gain" style="color: #ef4444;">-1118.35</p></div>
+        <div class="card"><h3>標普 500</h3><p class="val">5375.05</p><p class="gain" style="color: #ef4444;">-200.57</p></div>
     </main>
 
     <section class="news-section">
-        <h3>宏觀趨勢深度分析 (人.事.時.地.物)</h3>
-        <div id="news-list">
-            <p>1. <strong>美伊戰爭</strong>：伊朗革命衛隊指揮官於6月8日宣佈在波斯灣部署新型導彈，以回應美國海軍在該區域的巡邏行動。此舉引發市場對戰略航道封鎖的擔憂，導致國際原油價格在亞洲盤中大幅飆升，避險情緒高漲。</p>
-            <p>2. <strong>俄烏戰爭</strong>：烏克蘭國防部於6月8日清晨派遣無人機編隊，針對俄羅斯境內的多座煉油設施進行精確打擊。此次行動重創俄國能源出口物流，導致全球天然氣價格在倫敦交易中心短線跳漲，能源穩定供應面臨挑戰。</p>
-            <p>3. <strong>聯準會貨幣政策</strong>：聯準會主席鮑爾於6月7日在華盛頓公開發表演說，針對近期高於預期的CPI數據表示強烈擔憂。他強調下半年利率仍需維持在限制性區間，這項談話導致全球股市在6月8日出現大範圍資金外逃效應。</p>
-            <p>4. <strong>全球半導體庫存調整</strong>：台積電執行長魏哲家於6月8日在台北召開法說會，明確指出高效能運算晶片的庫存調整週期將延長至年底。此消息直接衝擊全球科技股，導致那斯達克指數承受沉重的拋售壓力，半導體供應鏈面臨獲利下修風險。</p>
-            <p>5. <strong>歐洲製造業保護主義</strong>：歐盟貿易執委會於6月8日在布魯塞爾簽署新關稅協定，針對亞洲進口的電子零組件加徵反傾銷稅。該政策旨在保護歐洲本土製造業，卻導致亞洲出口型企業營收預期下降，引發全球電子零組件供應鏈的大規模重新佈局。</p>
-        </div>
+        <h3>宏觀趨勢分析</h3>
+        <p>1. <strong>美伊戰爭</strong>：伊朗革命衛隊於6月8日部署導彈於波斯灣，引發國際能源供應緊張與航道封鎖風險。</p>
+        <p>2. <strong>俄烏戰爭</strong>：烏克蘭軍方於6月8日攻擊俄國境內煉油設施，衝擊全球能源供應鏈穩定性。</p>
+        <p>3. <strong>利率政策</strong>：聯準會主席鮑爾於6月7日強調高利率維持之必要性，促使全球資本市場進行資產重新評估。</p>
+        <p>4. <strong>晶片產業</strong>：台積電於6月8日法說會表示高效能運算晶片庫存調整期延長，拖累全球科技股獲利展望。</p>
+        <p>5. <strong>貿易壁壘</strong>：歐盟於6月8日宣佈針對進口電子零組件徵收關稅，推升全球供應鏈營運成本。</p>
     </section>
-
-    <script>
-        function refreshPage() { window.location.reload(); }
-    </script>
 </body>
 </html>
