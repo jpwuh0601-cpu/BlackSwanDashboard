@@ -2,27 +2,33 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>全球宏觀與市場監控</title>
+    <title>全球市場監控儀表板</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>全球市場監控儀表板</h1>
-        <button onclick="window.location.reload()" class="btn-refresh">🔄 手動重新整理數據</button>
+        <h1>全球市場監控</h1>
+        <button onclick="window.location.reload()" class="btn-refresh">🔄 手動更新</button>
     </header>
 
-    <main class="grid" id="market-data">
+    <main class="grid">
+        <!-- 台/日/韓模塊：漲紅跌綠 -->
         <div class="card"><h3>加權指數</h3><p class="val">20478.45</p><p class="gain" style="color: #10b981;">-1568.16</p></div>
+        <div class="card"><h3>日經 225</h3><p class="val">38683.93</p><p class="gain" style="color: #10b981;">-2547.00</p></div>
+        <div class="card"><h3>韓國綜合</h3><p class="val">2648.76</p><p class="gain" style="color: #10b981;">-374.61</p></div>
+        <!-- 美股模塊：漲綠跌紅 -->
         <div class="card"><h3>道瓊工業</h3><p class="val">39689.54</p><p class="gain" style="color: #ef4444;">-695.15</p></div>
+        <div class="card"><h3>那斯達克</h3><p class="val">17325.21</p><p class="gain" style="color: #ef4444;">-1118.35</p></div>
+        <div class="card"><h3>標普 500</h3><p class="val">5375.05</p><p class="gain" style="color: #ef4444;">-200.57</p></div>
     </main>
 
     <section class="news-section">
         <h3>宏觀趨勢深度分析</h3>
-        <p>1. <strong>美伊戰爭</strong>：伊朗革命衛隊指揮官法拉希於2026年6月8日清晨，在波斯灣部署新型反艦導彈，回應美軍巡航行動。此舉引發戰略航道安全恐慌，造成國際原油價格大幅震盪，避險情緒席捲全球金融市場。</p>
-        <p>2. <strong>俄烏戰爭</strong>：烏克蘭軍方於2026年6月8日針對俄羅斯庫斯克煉油設施進行精確無人機打擊。行動導致能源出口物流中斷，全球天然氣及油品供應鏈面臨嚴峻挑戰，能源價格短期內出現劇烈波動。</p>
-        <p>3. <strong>美國利率政策</strong>：聯準會主席鮑爾於2026年6月7日在華盛頓公開表示，鑑於近期通膨數據居高不下，貨幣政策將維持限制性水平。此強硬態度導致全球股市面臨資金撤離壓力，投資人恐慌情緒蔓延。</p>
-        <p>4. <strong>半導體供應鏈</strong>：台積電執行長魏哲家於2026年6月8日在台北法說會指出，受高效能運算晶片需求修正影響，庫存調整期將延長至年底。此預期嚴重打擊全球科技股信心，供應鏈獲利展望面臨下修。</p>
-        <p>5. <strong>全球貿易保護主義</strong>：歐盟執委會主席馮德萊恩於2026年6月8日在布魯塞爾簽署行政命令，針對亞洲進口零組件徵收反傾銷關稅。此舉旨在保護歐洲製造業，卻導致亞洲科技出口企業營收預期下降，全球供應鏈面臨重組。</p>
+        <p>1. <strong>美伊戰爭</strong>：伊朗革命衛隊指揮官法拉希於2026年6月8日清晨，在波斯灣部署新型導彈，以回應美軍巡航行動。此事件引發國際能源供應緊張，避險資金瘋狂湧入避險資產，推升全球金融市場動盪。</p>
+        <p>2. <strong>俄烏戰爭</strong>：烏克蘭軍方於2026年6月8日針對俄羅斯庫斯克州煉油設施進行精確無人機打擊。行動重創俄國能源出口物流，導致全球天然氣價格出現短期跳漲，能源供應鏈穩定性面臨考驗。</p>
+        <p>3. <strong>利率決策</strong>：聯準會主席鮑爾於2026年6月7日在美國華盛頓特區演說時表示，近期通膨數據居高不下，貨幣政策將維持限制性區間，導致全球股市今日面臨劇烈拋售壓力。</p>
+        <p>4. <strong>半導體供應</strong>：台積電執行長魏哲家於2026年6月8日在台北召開法說會，指出高效能運算晶片庫存調整期將延長至年底。此負面展望導致科技股板塊領跌，全球晶片供應鏈獲利預期面臨修正。</p>
+        <p>5. <strong>貿易壁壘</strong>：歐盟執委會主席馮德萊恩於2026年6月8日在布魯塞爾簽署新關稅協定，針對亞洲進口電子零組件徵收反傾銷稅。此舉保護歐洲製造業的同時，也導致亞洲供應鏈出口成本顯著上升。</p>
     </section>
 </body>
 </html>
