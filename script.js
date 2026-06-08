@@ -1,7 +1,22 @@
-// 重新整理頁面的函數，讓使用者手動檢查最新行情
-function refreshData() {
-    alert("正在連線至市場伺服器重載數據...");
-    window.location.reload(); 
+const API_KEY = "0HJ4Z6G03X9CU195"; // 在這裡貼上您的 API Key
+
+async function fetchStock(symbol, elementId) {
+    try {
+        const res = await fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${API_KEY}`);
+        const data = await res.json();
+        document.getElementById(elementId).innerText = data.c ? data.c.toFixed(2) : "無數據";
+    } catch (e) {
+        document.getElementById(elementId).innerText = "Error";
+    }
 }
 
-console.log("儀表板已載入，手動更新機制已就緒。");
+function updateAllData() {
+    // 呼叫 API (需注意 Finnhub 對特定指數代號的支援)
+    fetchStock("AAPL", "TWSE"); // 註：Finnhub 免費版對特定非美股代號有限制
+    fetchStock("DXY", "DXY");
+    fetchStock("GOLD", "GOLD");
+    fetchStock("DJI", "DJI");
+}
+
+// 載入後自動執行
+updateAllData();
