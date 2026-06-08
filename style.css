@@ -11,3 +11,7 @@ h3 { color: #94a3b8; font-size: 0.85rem; margin-bottom: 10px; }
 .news-section { background: #1e293b; padding: 25px; border-radius: 12px; }
 .news-section h3 { margin-bottom: 20px; border-bottom: 1px solid #334155; padding-bottom: 10px; }
 .news-section p { margin-bottom: 20px; line-height: 1.7; color: #cbd5e1; border-left: 4px solid #3b82f6; padding-left: 15px; }
+/* ... 前面設定保持不變 ... */
+.val { font-size: 1.2rem; font-weight: bold; margin: 5px 0; }
+.gain { font-size: 0.9rem; font-weight: 600; margin: 0; }
+/* ... 後續設定保持不變 ... */
